@@ -2,12 +2,11 @@
 import { Link } from "react-router-dom";
 import logo from "../../assests/images/bacola-logo.png";
 import Button from "@mui/material/Button";
-
+import { CiSearch } from "react-icons/ci";
+import { FaRegUser } from "react-icons/fa6";
+import { IoBagHandleOutline } from "react-icons/io5";
 
 import CountryDrop from "../CountryDrop";
-
-
-
 
 function Header() {
   return (
@@ -16,14 +15,15 @@ function Header() {
         <div className="top-strip bg-darkBlue">
           <div className="container">
             <p className="mb-0 mt-0 text-center">
-
               Due to the<b> COVID 19 </b> epidemic, orders may be processed with
               a slight delay
             </p>
           </div>
         </div>
+        {/*------------------here blue strip finish---------------*/}
 
-        <div className="header">
+        {/*---------- below strip of blue content start here------------*/}
+        <div className="header mt-2">
           <div className="container">
             <div className="row">
               <div className="logoWrapper d-flex  align-items-center col-sm-2">
@@ -32,13 +32,38 @@ function Header() {
                 </Link>
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
-              <CountryDrop/>
+                <CountryDrop />
 
-              {/* Header search bar start here*/}
-              {/* Header search bar End here */}
-                
-                   
-             
+                {/*----------------------- Header search bar start here---------------*/}
+                <div className="headerSearch  ml-3 mr-2">
+                  <input
+                    type="text"
+                    name="item-name"
+                    placeholder="Search for products..."
+                  />
+                  <Button>
+                    <CiSearch />
+                  </Button>
+                </div>
+
+                {/* ---------------------Header search bar End here -----------------------*/}
+                <div className="part3 d-flex align-items-center ml-auto">
+                  <Button className="circle ml-2">
+                    <FaRegUser />
+                  </Button>
+                  <div className="ml-auto cart-tab d-flex align-items-center ">
+                    <span className="price ml-3">$3.29</span>
+                    <div className="position-relative ml-3">
+                      <Button className="cart  circle">
+                        
+                        <IoBagHandleOutline />
+                      </Button>
+                      <span className="count d-flex align-items-center justify-content-center ">
+                        1
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

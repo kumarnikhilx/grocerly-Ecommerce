@@ -17,6 +17,7 @@ body{
      padding: 8px 0px;
     
 }
+
 .headerWrapper .top-strip p{
     color: #fff;
     font-size: 14px;
@@ -29,11 +30,11 @@ body{
     padding: 15px 0px;
 }
 .logoWrapper img{width: 100px;}
-.headerWrapper .header .part2 .countryDrop{width: 150px; 
+.headerWrapper .header .part2 .countryDrop{width: 170px; 
 height: 60px; 
-min-width: 150px;
+min-width: 170px;
 color: #000;
-border-radius: 7px !important;
+border-radius: 6px !important;
 padding: 10px 10px !important;
 border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -59,4 +60,70 @@ justify-content: flex-start;
 }
 .headerWrapper .header .part2 .countryDrop .angle-icon{
     opacity: 0.5;
+}
+ /*----------------------- Header search bar start here---------------*/
+
+.header .headerSearch{
+    width: 60%;
+    height: 60px;
+    background: #f3f4f7;
+    padding: 5px;
+    border-radius: 6px;
+    position: relative;
+    border:1px solid rgba(0,0,0,0.1);
+}
+.header .headerSearch input{
+    width: 100%;
+    height: 45px;
+    background: transparent !important;
+    outline: none !important;
+    border: 0px !important ;
+
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7) ;
+    padding: 0px 20px;
+}
+.header .headerSearch input::-webkit-input-placeholder{color:rgba(0, 0, 0, 0.6);}
+.header .headerSearch button{
+    position: absolute;
+    top: 8px;
+    font-size: 30px;
+    right: 10px;
+    color: black;
+    height: 40px;
+    font-size: 28px;
+    width: 40px;
+    z-index: 100;
+    border-radius: 50%;
+    min-width: 40px;
+    /* left: 5px; */
+}
+
+ /*---------------------Header search bar End here -----------------------*/
+
+ .header .part3 .circle{
+    align-items: center !important;
+    justify-content: center !important;
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    border-radius: 50% !important;
+    color: #000 !important;
+    min-width: 50px !important;
+ }
+  .header .part3 .circle svg{font-size: 22px;}
+  .header .part3 .cart svg{color: #ea2b0f;}
+  .header .part3 .cart {background:#fff1ee;}
+
+.cart-tab .count{
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    background-color: #ea2b0f;
+    border-radius: 50%;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    
+
 }

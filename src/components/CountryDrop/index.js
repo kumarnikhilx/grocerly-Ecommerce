@@ -2,18 +2,49 @@ import Button from "@mui/material/Button";
 import { FaAngleDown } from "react-icons/fa";
 import Dialog from "@mui/material/Dialog";
 import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { CiSearch } from "react-icons/ci";
+import { MyContext } from "../../App";
 
 function CountryDrop() {
   const [isOpenModel,setIsOpenMode]= useState(false);
+  const [selectedTab,setselectedTab]= useState(null);
+const [countryList,setcountryList]= useState([]);
+
+
+const selectCountry=(index,country)=>{
+setselectedTab(index);
+setIsOpenMode(false);
+context.setselectedCountry(country);
+
+}
+useEffect(()=>{
+  setcountryList(context.countryList);
+
+},[]);
+const filterList=(e)=>{
+  const keyword=e.target.value.toLowerCase();
+
+  if(keyword!==""){
+
+    const list= countryList.filter((item)=>{
+      return item.country.toLowerCase().includes(keyword);
+    })
+    setcountryList(list);
+  }
+  else{
+
+    setcountryList(context.countryList);
+  }
+}
+const context = useContext(MyContext);
   return (
     <>
       <Button className="countryDrop" onClick={()=>setIsOpenMode(true)}>
         <div className="info d-flex flex-column">
           <span className="label"> your Location</span>
-          <span className="name">india</span>
+          <span className="name">{context.selectedCountry!==""? context.selectedCountry.length>10? context.selectedCountry?.substr(0,10)+'...' :context.selectedCountry: 'select Location'}</span>
         </div>
         <span className="angle-icon ml-auto">
           <FaAngleDown />
@@ -29,6 +60,7 @@ function CountryDrop() {
             type="text"
             name="item-name"
             placeholder="Search your Area..."
+            onChange={filterList}
           />
           <Button > 
             <CiSearch />
@@ -36,17 +68,14 @@ function CountryDrop() {
         </div>
 
         <ul className="countryList mt-3">
-          <li><Button onClick={()=>setIsOpenMode(false)}>Select a Location</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>India</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>New York</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Washington</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Georgia</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Florida </Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>California</Button> </li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Arizona</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Minnesota</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Kansas</Button></li>
-          <li><Button onClick={()=>setIsOpenMode(false)}>Colorado</Button></li>
+         {
+          countryList?.length!==0 && countryList?.map((item,index)=>{
+            return(
+
+              <li key={index}><Button onClick={()=>selectCountry(index,item.country) }className={`${selectedTab==index? 'active':''}`}>{item.country}</Button></li>
+            )
+          })
+         }
         </ul>
         
       </Dialog>

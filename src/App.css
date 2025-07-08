@@ -41,7 +41,10 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
-
+.headerWrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 12px;
+}
 .headerWrapper .header{
     width: 100%;
     height: auto;
@@ -97,11 +100,17 @@ justify-content: flex-start;
    width: 100%;   
 }
 .locationModel .countryList li button{
-    text-transform: uppercase !important;
+    text-transform:none!important;
    width: 100%;   
    color: rgba(0, 0, 0, 0.7);
    justify-content: flex-start !important;
    padding: 15px 20px;
+}
+.locationModel .countryList li button:hover{
+    background: #e4e1e1;
+}
+.locationModel .countryList li button.active{
+    background: #e7e3e3 !important;
 }
 .locationModel .btn-close{
     position: absolute !important ;
@@ -236,11 +245,11 @@ nav .allCartTab{
         align-items: center;
         border-radius: 25px;
         transition: all 0.2s ease-in-out;
-        text-transform: uppercase;
+        
         color: rgba(0, 0, 0, 0.7);
        font-size: 15px;
         padding: 10px 18px;
-        font-weight: 500;
+        font-weight: 600;
     }
   
 

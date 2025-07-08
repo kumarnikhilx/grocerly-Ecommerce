@@ -9,8 +9,11 @@ import { GrCart } from "react-icons/gr";
 import CountryDrop from "../CountryDrop";
 import SearchBox from "./SearchBox";
 import Navigation from "./Navigation";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 function Header() {
+  const context=useContext(MyContext);
   return (
     <>
       <div className="headerWrapper ">
@@ -34,7 +37,12 @@ function Header() {
                 </Link>
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
-                <CountryDrop />
+
+                {
+                  context.countryList.length!==0 && <CountryDrop />
+
+                }
+                
 
                 {/*----------------------- Header search bar start here---------------*/}
               

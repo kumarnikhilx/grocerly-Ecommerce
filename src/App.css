@@ -12,6 +12,7 @@ body{
     font-family: "Lato", sans-serif;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
 }
 .top-strip{
     background: #233a95;
@@ -541,6 +542,96 @@ nav .allCartTab{
             .swiper{
                 padding-right: 1px;
             }
+
+/*-------------HomeCat ------------------------*/
+
+.homeCat{
+  padding: 35px 0px;
+}
+.homeCat .swiper .item{
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  background: #feefea;
+  border-radius: 10px ;
+}  
+  .homeCat .swiper{
+    overflow: inherit !important;
+  }
+  .homeCat .swiper .item img{
+     width: 80%;
+ } 
+ .hd{font-size: 20px; font-weight: 600; text-transform: capitalize;}
+ .homeCat .swiper-button-prev, .homeCat .swiper-button-next{
+  top: -30px !important;
+  width: 30px;
+  height: 30px !important;
+ }
+ .homeCat .swiper-button-prev::after, .homeCat .slick-arrow.slick-next::after{
+  font-size: 12px !important;
+ }
+
+.productRow2{flex-wrap: wrap;gap: 10px;}
+.productRow2 .productItem{width: 23%; overflow: hidden;border-right: 1px solid rgba(0, 0, 0, 0.2) !important;}
+.actions
+.bannerSec{gap: 15px;}
+.sticky{
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}
+
+.newsLetterSection{
+  width: 100%;
+  height: auto;
+  background: #233a95;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0px;
+}
+.newsLetterSection p{font-size: 18px; margin: 10px 0px !important; }
+.newsLetterSection h3{font-size: 35px; font-weight: bold;}
+.newsLetterSection p.text-light{color: #fff !important; opacity: 0.5; font-size: 15px;}
+
+.newsLetterSection img{
+  position: absolute;
+  bottom: 0px;
+  right: 12%;
+}
+.newsLetterSection form{
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  padding:10px;
+  position: relative;
+  border-radius: 5px;
+}
+.newsLetterSection form svg{
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-size: 25px;
+}
+.newsLetterSection form  input{
+  width: 100%;
+  height: 100%;
+background: #fff;
+outline: none;
+border: 0px;
+padding-left: 40px !important;
+padding-right: 200px !important;
+}
+.newsLetterSection form button{
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: #233a95;
+  font-size: 16px;
+  padding: 12px 25px !important;
+  color: #fff;
+  font-weight: 600! ;
+}
+
 
 
 

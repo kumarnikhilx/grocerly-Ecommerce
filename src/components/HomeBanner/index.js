@@ -30,7 +30,6 @@ const HomeBanner=()=>{
                     <img src="https://cmsimages.shoppersstop.com/Gio_web_5e747ef0ce/Gio_web_5e747ef0ce.png" alt="" />
                 </div>
                 <div className="item">
-
                     <img src="https://cmsimages.shoppersstop.com/biba_w_main_banner_web_a1b4aa9cc4/biba_w_main_banner_web_a1b4aa9cc4.png" alt="" />
                 </div>
              </Slider>

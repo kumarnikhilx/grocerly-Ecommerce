@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Swiper, SwiperSlide} from "swiper/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import 'swiper/css';
@@ -8,15 +8,26 @@ import Button from "@mui/material/Button";
 import { TfiFullscreen} from "react-icons/tfi";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Pagination, Navigation } from 'swiper/modules';
-function ProductItem() {
-  return (
+import ProductModel from '../ProductModel';
+function ProductItem() { 
+  const[isOpenProductModel,setisOpenProductModel]=useState(false);
+
+  const viewProductDetails=(id)=>{
+  setisOpenProductModel(true);
+}  
+const closeProductModel=(start)=>{
+  setisOpenProductModel(false);
+
+}
+return (
+    <>
     <div className="item productItem">
                          <div className="imgWrapper">
                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt=""  className="w-100"/>
    
                            <span className=" badge badge-primary">28%</span>
                            <div className="actions">
-                             <Button><TfiFullscreen/></Button>
+                             <Button onClick={()=>viewProductDetails(1)}><TfiFullscreen/></Button>
                              <Button><IoIosHeartEmpty style={{fontSize:'20px'}}/></Button>
                            </div>
                          </div>    
@@ -30,6 +41,10 @@ function ProductItem() {
                          </div>
                          </div>
                      </div>
+
+                     {isOpenProductModel===true && <ProductModel closeProductModel={closeProductModel}/>}
+                     {/*<*/}
+                     </>
   )
 }
 

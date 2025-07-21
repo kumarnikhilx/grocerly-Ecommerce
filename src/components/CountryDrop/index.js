@@ -54,7 +54,7 @@ const context = useContext(MyContext);
       <Dialog open={isOpenModel} onClose={()=>setIsOpenMode(false)} className="locationModel">
         <h4 className="mb-0">Choose your Delivery Location</h4>
         <p>Enter your address and we will specify the offer for your area.</p>
-        <Button className="btn-close" onClick={()=>setIsOpenMode(false)}><IoMdClose /></Button>
+        <Button className="close_" onClick={()=>setIsOpenMode(false)}><IoMdClose /></Button>
         <div className="headerSearch  w-100">
           <input
             type="text"

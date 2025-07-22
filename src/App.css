@@ -14,9 +14,13 @@ body {
   overflow-x: hidden;
 }
 .top-strip {
-  background: #233a95;
+  background: #6e3ace;
 }
-
+.btn-blue{background: #6e3ace !important; color: #fff !important;}
+.btn-big{font-size: 15px !important; padding: 7px 35px !important;}
+.btn-round{border-radius: 30px !important;}
+.btn-sml{font-size: 13px !important;color: #000;}
+.btn-sml svg{font-size: 20px !important;}
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -92,7 +96,7 @@ body {
 .headerWrapper .header .part2 .countryDrop .name {
   font-size: 14px !important;
   text-transform: capitalize !important;
-  color: #233a95 !important;
+  color: #6e3ace !important;
   font-weight: 700;
   line-height: 16px;
 }
@@ -212,7 +216,7 @@ nav .navPart2 {
 }
 
 nav .allCartTab {
-  background-color: #2bbef9;
+  background-color: #6e3ace;
   /* width: auto; */
   padding: 10px 10px !important;
   border-radius: 30px;
@@ -227,7 +231,7 @@ nav .allCartTab * {
   color: white;
 }
 nav .allCartTab:hover {
-  background: #2bbef9;
+  background: #6d30dd;
 }
 nav .allCartTab .text {
   font-size: 14px;
@@ -281,6 +285,8 @@ nav .navPart1 .catWrapper .slideBarNav ul li Button {
   justify-content: flex-start;
   text-transform: capitalize !important;
 }
+nav .navPart1 .catWrapper .slideBarNav ul li Button:hover{color: #6e3ace;}
+
 nav .navPart1 .catWrapper .slideBarNav ul li Button svg {
   opacity: 0.5;
   font-size: 15px;
@@ -336,7 +342,7 @@ nav .navPart2 ul li a Button {
 
 nav .navPart2 li a Button:hover {
   /* background: #f0faff; */
-  color: #2bbef9;
+  color: #6e3ace;
   text-decoration: none;
 }
 nav .navPart2 ul li {
@@ -501,7 +507,7 @@ nav .navPart2 li .submenu a button:hover .blink {
   font-size: 15px;
 }
 .productItem .actions Button:hover {
-  background: #233a95 !important;
+  background: #6e3ace!important;
 }
 .productItem .imgWrapper {
   overflow: hidden;
@@ -606,7 +612,8 @@ nav .navPart2 li .submenu a button:hover .blink {
 .newsLetterSection {
   width: 100%;
   height: auto;
-  background: #233a95;
+  /* background: #6e3ace; */
+  background: linear-gradient(108deg,rgba(106, 58, 206, 1) 0%, rgba(87, 199, 193, 1) 100%, rgba(237, 221, 83, 1) 100%);
   position: relative;
   overflow: hidden;
   padding: 70px 0px;
@@ -657,7 +664,7 @@ nav .navPart2 li .submenu a button:hover .blink {
   position: absolute;
   top: 6px;
   right: 10px;
-  background: #233a95;
+  background: #723ed2;
   font-size: 16px;
   padding: 12px 25px !important;
   color: #fff;
@@ -709,19 +716,19 @@ footer .copyright ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 footer .copyright ul li a svg {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
 }
 footer .copyright ul li a:hover {
-  background: #2bbef9 !important;
+  background: #6e3ace !important;
 }
-footer .copyright ul li a:hover {
+footer .copyright ul li a:hover svg{
   color: #fff !important;
 }
 .productModel .MuiPaper-elevation {
@@ -733,6 +740,7 @@ footer .copyright ul li a:hover {
 .productModel h4{font-size: 20px !important;color: rgba(0, 0, 0, 0.8) !important;}
 
 .productZoom{width: 100%;height: auto;border: 1px solid rgba(0, 0, 0, 0.1);padding: 0px;overflow: hidden;border-radius: 15px;}
+.productZoom .badge-primary{top: 20px !important;left: 20px !important;z-index: 100;}
 .zoomSliderBig{width: 100% !important;}
 .zoomSlider *{outline: none !important; margin-top: 3px;}
 .zoomSlider .slick-slide{padding-right: 20px !important;}
@@ -743,3 +751,38 @@ footer .copyright ul li a:hover {
 .zoomSlider .slick-arrow.slick-prev{left: -5% !important;}
 
 .badge.bg-success{ background: #e5f8ed !important;color: #16b858 !important; padding: 5px !; border-radius: 50% !important;}
+
+.quantityDrop{width: 150px !important; gap: 10px;}
+.quantityDrop Button{min-width: 40px !important;width: 40px !important;height: 40px !important;border-radius: 50% !important;background: #edeef5 !important;border: 1px solid rgba(0, 0, 0, 0.1) !important; color: #000;}
+.quantityDrop Button svg{color: #000 !important;}
+.quantityDrop input{width: 30px;border: 0px;background: transparent;outline: none !important; text-align: center !important;}
+.productModel .actions Button{color: #000 !important;border: 1px solid rgba(0, 0, 0, 0.1) !important; font-size: 10px !important;}
+.productModel .actions Button svg{font-size: 15px !important;}
+
+.product_Listing_Page {padding: 35px 0px;}
+.product_Listing_Page .productListing {gap: 20px;}
+.product_Listing_Page .productListing .sidebar {width: 30%; flex: 0 0 20%;}
+.product_Listing_Page .productListing .sidebar .filterBox{margin-bottom: 35px;}
+.product_Listing_Page .productListing .sidebar .filterBox h5 {font-weight: 700; font-size: 14px; margin-bottom: 15px;}
+.product_Listing_Page .productListing .sidebar .scroll {padding-left: 10px; max-height: 180px; overflow-y: scroll; overflow-x: hidden;}
+
+.product_Listing_Page .productListing .sidebar .scroll::-webkit-scrollbar {width: 3px !important; height: 5px !important;}
+.product_Listing_Page .productListing .sidebar .scroll ul{margin-bottom: 0px !important;}
+.product_Listing_Page .productListing .sidebar .scroll ul li {list-style: none; margin-bottom: 0px !important; width: 100%;}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {padding: 2px !important;}
+.css-ahj2mt-MuiTypography-root {font-size: 13px !important;}
+.css-i4bv87-MuiSvgIcon-root {width: 5px !important; height: 5px !important;}
+
+.css-1umw9bq-MuiSvgIcon-root{color: #6e3ace !important;}
+/* label{margin-bottom: -10px !important;} */
+
+.css-19opgx6-MuiFormControlLabel-root{margin-bottom: -4px !important;}
+
+.range-slider { height: 5px !important; }
+.product_Listing_Page .productListing .content_right { width: 80%; flex: 0 0 80%; }
+.range-slider .range-slider__thumb { background: #6d4aae !important; }
+.range-slider .range-slider__range { background: #6d4aae !important; }
+.range-slider .range-slider__thumb { width: 15px !important; height: 15px !important; }
+
+
+

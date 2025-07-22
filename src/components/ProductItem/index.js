@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {Swiper, SwiperSlide} from "swiper/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import 'swiper/css';
@@ -9,14 +9,15 @@ import { TfiFullscreen} from "react-icons/tfi";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Pagination, Navigation } from 'swiper/modules';
 import ProductModel from '../ProductModel';
+import { MyContext } from '../../App';
 function ProductItem() { 
-  const[isOpenProductModel,setisOpenProductModel]=useState(false);
+  const context=useContext(MyContext);
 
   const viewProductDetails=(id)=>{
-  setisOpenProductModel(true);
+  context.setisOpenProductModel(true);
 }  
 const closeProductModel=(start)=>{
-  setisOpenProductModel(false);
+  context.setisOpenProductModel(false);
 
 }
 return (
@@ -42,8 +43,8 @@ return (
                          </div>
                      </div>
 
-                     {isOpenProductModel===true && <ProductModel closeProductModel={closeProductModel}/>}
-                     {/*<*/}
+                    
+                     
                      </>
   )
 }

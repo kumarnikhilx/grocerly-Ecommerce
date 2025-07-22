@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import Dialog from '@mui/material/Dialog'
 import Button from '@mui/material/Button'
 import { MdClose } from 'react-icons/md'
@@ -6,9 +6,18 @@ import Rating from '@mui/material/Rating';
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import Slider from 'react-slick';
+import { IoIosHeartEmpty } from "react-icons/io";
+import { MdCompareArrows } from "react-icons/md";
+import { MyContext } from '../../App';
+
+
+import QuantityBox from '../QuantityBox';
+
 function ProductModel(props) {
     const zoomSliderBig=useRef();
     const zoomSlider=useRef();
+const context=useContext(MyContext);
+
     var settings2={
         dots: false,
         infinite: false,
@@ -34,8 +43,8 @@ function ProductModel(props) {
     }
   return (
     <>
-    <Dialog open={true} className='productModel' onClose={()=>props.closeProductModel()}>
-        <Button className='close_' onClick={()=>props.closeProductModel()}><MdClose/></Button>
+    <Dialog open={true} className='productModel' onClose={()=>context.setisOpenProductModel(false)}>
+        <Button className='close_' onClick={()=>context.setisOpenProductModel(false)}><MdClose/></Button>
         <h4 className='mb-1 font-weight-bold'>All Natural Italian-style chicken meatballs</h4>
         <div className='d-flex align-items-center'>
             <div className="d-flex align-items-center mr-4">
@@ -48,7 +57,8 @@ function ProductModel(props) {
         <hr/>
         <div className="row mt-2 productDetailModel">
             <div className="col-md-5">
-                <div className="productZoom">
+                <div className="productZoom position-relative">
+                    <div className="badge badge-primary position-absolute">23%</div>
                     <Slider {...settings2} className='zoomSliderBig' ref={zoomSliderBig}>
                         
                              <div className="item">
@@ -98,10 +108,13 @@ function ProductModel(props) {
                 <p className='mt-3'>Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent</p>
 
                 <div className="d-flex align-items-center">
-                    <div className="quantityDrop d-flex align-items-center">
+                    <QuantityBox/>
+                    <Button className='btn-blue btn-big btn-round'>Add to Cart </Button>
+                </div>
 
-                    </div>
-                    <Button className='btn-blue'></Button>
+                <div className="d-flex align-items-center mt-5 actions">
+                    <Button className='btn-round btn-sml' variant='outlined'><IoIosHeartEmpty/> &nbsp; ADD TO WISHLIST</Button>
+                    <Button className='btn-round btn-sml ml-3' variant='outlined'><MdCompareArrows/> &nbsp; COMPARE</Button>
                 </div>
 
             </div>

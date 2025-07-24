@@ -7,8 +7,8 @@ import "react-range-slider-input/dist/style.css";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
-    const[value, setValue]=useState([100,6000]);
-    const[value2, setValue2]=useState(0);
+  const [value, setValue] = useState([100, 6000]);
+  const [value2, setValue2] = useState(0);
 
   return (
     <>
@@ -18,87 +18,141 @@ function Sidebar() {
           <div className="scroll">
             <ul>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Men" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Men"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Women" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Women"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Kids" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Kids"
+                />
               </li>
               <li>
-                <FormControlLabel  className='w-100' control={<Checkbox />} label="Gift" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Gift"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="watches" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="watches"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Beauty" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Beauty"
+                />
               </li>
             </ul>
           </div>
         </div>
         <div className="filterBox mt-3">
-    <h6>FILTER BY PRICE</h6>
-    
-    <RangeSlider 
-        value={value} 
-        onInput={setValue} 
-        min={100} 
-        max={60000} 
-        step={5} 
-    />
+          <h6>FILTER BY PRICE</h6>
 
-    <div className="d-flex pt-2 pb-2 priceRange">
-        <span>
-            From: <strong className="text-dark">Rs: {value[0]}</strong>
-        </span>
-        <span className="ml-auto">
-            To: <strong className="text-dark">Rs: {value[1]}</strong>
-        </span>
-    </div>
-</div>
-<div className="filterBox mt-3">
+          <RangeSlider
+            value={value}
+            onInput={setValue}
+            min={100}
+            max={60000}
+            step={5}
+          />
+
+          <div className="d-flex pt-2 pb-2 priceRange">
+            <span>
+              From: <strong className="text-dark">Rs: {value[0]}</strong>
+            </span>
+            <span className="ml-auto">
+              To: <strong className="text-dark">Rs: {value[1]}</strong>
+            </span>
+          </div>
+        </div>
+        <div className="filterBox mt-3">
           <h5>PRODUCT STATUS</h5>
           <div className="scroll">
             <ul>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Men" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Men"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="In Stoke" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="In Stoke"
+                />
               </li>
-             
             </ul>
           </div>
         </div>
-<div className="filterBox mt-3">
+        <div className="filterBox mt-3">
           <h5>BRANDS</h5>
           <div className="scroll">
             <ul>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Frito Lay" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Frito Lay"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Nespresso" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Nespresso"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Oreo" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Oreo"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Quaker" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Quaker"
+                />
               </li>
               <li>
-                <FormControlLabel className='w-100' control={<Checkbox />} label="Welch's" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Welch's"
+                />
               </li>
-             
             </ul>
           </div>
 
-          <Link to="/"><img src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/sidebar-banner.gif" className='w-100 mt-5' alt="" /></Link>
+          <Link to="/">
+            <img
+              src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/sidebar-banner.gif"
+              className="w-100 mt-5"
+              alt=""
+            />
+          </Link>
         </div>
-
-        
       </div>
     </>
   );

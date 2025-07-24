@@ -10,19 +10,19 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { Pagination, Navigation } from 'swiper/modules';
 import ProductModel from '../ProductModel';
 import { MyContext } from '../../App';
-function ProductItem() { 
+function ProductItem(props) { 
   const context=useContext(MyContext);
 
   const viewProductDetails=(id)=>{
   context.setisOpenProductModel(true);
 }  
-const closeProductModel=(start)=>{
-  context.setisOpenProductModel(false);
+// const closeProductModel=(start)=>{
+//   context.setisOpenProductModel(false);
 
-}
+// }
 return (
     <>
-    <div className="item productItem">
+    <div className={`item productItem ${props.itemView}`}>
                          <div className="imgWrapper">
                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt=""  className="w-100"/>
    

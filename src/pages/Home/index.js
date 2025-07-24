@@ -55,7 +55,7 @@ const Home = () => {
               <div className="product_row">
                 <Swiper
                 slidesPerView={4}
-                spaceBetween={0}
+                spaceBetween={6}
                 pagination={{clickable: true,}}
                 modules={[Navigation]}
                 className="mySwiper">

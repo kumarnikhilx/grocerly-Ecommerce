@@ -235,7 +235,8 @@ function ProductDetails() {
 
                <br/>
 
-               <RelatedProducts/>
+               <RelatedProducts title={'RELATED PRODUCTS'}/>
+               <RelatedProducts title={'RECENTLY VIEW PRODUCTS'}/>
         </div>
       </section>
     </>

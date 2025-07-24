@@ -6,12 +6,12 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import ProductItem from '../../../components/ProductItem';
 
-function RelatedProducts() {
+function RelatedProducts(props) {
   return (
     <>
      <div className="d-flex align-items-center  mt-3">
                     <div className="info w-75">
-                      <h3 className="mb-0 hd">RELATED PRODUCTS</h3>
+                      <h3 className="mb-0 hd">{props.title}</h3>
                     </div>
                     <Button className="viewAllBtn ml-auto">
                       View All
@@ -21,7 +21,7 @@ function RelatedProducts() {
                   <div className="product_row">
                     <Swiper
                     slidesPerView={5}
-                    spaceBetween={0}
+                    spaceBetween={10}
                     pagination={{clickable: true,}}
                     modules={[Navigation]}
                     className="mySwiper">

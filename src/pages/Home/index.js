@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import {  Navigation } from 'swiper/modules';
 import ProductItem from "../../components/ProductItem";
 import newsletter from "../../assests/images/newsLetter.webp";
 import { IoMailOutline } from "react-icons/io5";

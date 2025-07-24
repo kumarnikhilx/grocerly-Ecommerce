@@ -16,10 +16,6 @@ function ProductItem(props) {
   const viewProductDetails=(id)=>{
   context.setisOpenProductModel(true);
 }  
-// const closeProductModel=(start)=>{
-//   context.setisOpenProductModel(false);
-
-// }
 return (
     <>
     <div className={`item productItem ${props.itemView}`}>

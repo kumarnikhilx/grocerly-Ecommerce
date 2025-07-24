@@ -9,13 +9,14 @@
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
 }
 .top-strip {
   background: #6e3ace;
 }
+.btn-red{background: #ed174a !important; color: #fff !important;}
 .btn-blue{background: #6e3ace !important; color: #fff !important;}
 .btn-big{font-size: 15px !important; padding: 7px 35px !important;}
 .btn-round{border-radius: 30px !important;}
@@ -749,12 +750,12 @@ footer .copyright ul li a:hover svg{
 .zoomSlider .slick-arrow{top: 55% !important;zoom: 80% !important;}
 .zoomSlider .slick-arrow.slick-next{right: -2% !important;}
 .zoomSlider .slick-arrow.slick-prev{left: -5% !important;}
-
+.badge{display: inline-block ;padding: 7px 10px;border-radius: 20px;}
 .badge.bg-success{ background: #e5f8ed !important;color: #16b858 !important; padding: 5px !; border-radius: 50% !important;}
 
 .quantityDrop{width: 150px !important; gap: 10px;}
 .quantityDrop Button{min-width: 40px !important;width: 40px !important;height: 40px !important;border-radius: 50% !important;background: #edeef5 !important;border: 1px solid rgba(0, 0, 0, 0.1) !important; color: #000;}
-.quantityDrop Button svg{color: #000 !important;}
+.quantityDrop Button svg{color: #000 !important; font-size: 18px !important;}
 .quantityDrop input{width: 30px;border: 0px;background: transparent;outline: none !important; text-align: center !important;}
 .productModel .actions Button{color: #000 !important;border: 1px solid rgba(0, 0, 0, 0.1) !important; font-size: 10px !important;}
 .productModel .actions Button svg{font-size: 15px !important;}
@@ -797,6 +798,48 @@ footer .copyright ul li a:hover svg{
 
 .productListing .productItem.one{width: 100%;display: flex; align-items: center;}
 .productListing .productItem.one .imgWrapper{width: 25%;}
+
+.section { padding: 45px 0px; }
+.productDetails h2.hd { font-size: 26px; }
+.productDetails .oldPrice { font-size: 20px; }
+.productDetails .netPrice { font-size: 22px; }
+.productSize { width: 100%; height: auto; padding: 25px 0px; }
+.productSize ul li { margin-right: 10px !important; }
+.productSize ul li a { display: flex; align-items: center; justify-content: center; padding: 5px 10px !important; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 5px !important; cursor: pointer; text-decoration: none !important; color: #000; font-size: 12px !important;font-weight: bold !important; transition: all 0.1s ease-in-out; }
+.productSize ul li a:hover{background: #ccc !important;}
+.productSize ul li a.active { background: #ed174a !important; color: #fff !important; }
+.productDetails .btn-red:hover{background: #6e3ace !important ;}
+.productDetails .btn-circle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+  padding: 5px !important;
+}
+.productDetails .btn-circle svg{
+  color: #000 !important;
+  opacity: 0.8 !important;
+  font-size: 18px !important;
+}
+.productDetails .btn-circle:hover{background: #ccc !important;}
+
+/* productTab*/
+.detailsPageTabs { background-color: #f9f4ff; border-radius: 30px; border: 1px solid #e0d6f5; }
+.customTabs .btn { border-radius: 30px; padding: 8px 20px; border: 1px solid #d5c7ee; background-color: white; color: black; margin-right: 10px; font-weight: 500; text-transform: none; }
+.customTabs .btn.active { background-color: #6a4bbc; color: white; border-color: #6a4bbc; }
+.tabContent { margin-top: 20px; padding: 10px 0; font-size: 16px; color: #1a1a1a; }
+.table-bordered { border: 1px solid #e0d6f5; width: 100%; margin-top: 15px; }
+.table-bordered th, .table-bordered td { border: 1px solid #e0d6f5; padding: 8px; }
+.review { margin-bottom: 20px; gap: 18px; width: 60% !important; height: auto !important; padding: 10px 10px !important; border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important; }
+.review .date { font-size: 0.9rem; color: #777; }
+.tabContent .review .personReview{display: flex; flex-direction: column;}
+
+
+
+
 
 
 

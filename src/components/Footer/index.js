@@ -174,7 +174,7 @@ function Footer() {
 
         <div className="copyright mt-3 pb-3 d-flex">
             <p className="=mb-0">copyright 2024.All rights reserves</p>
-            <ul className="list list-inline ml-auto mb-0">
+            <ul className="list list-inline ml-auto mb-0 socials">
                 <li className="list-inline-item">
                     <Link to="#"><FaFacebook/></Link>
                 </li>

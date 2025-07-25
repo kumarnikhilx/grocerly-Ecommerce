@@ -55,10 +55,10 @@ function Header() {
                   <div className="ml-auto cart-tab d-flex align-items-center ">
                     <span className="price ml-3">$3.29</span>
                     <div className="position-relative ml-3">
-                      <Button className="cart  circle">
+                   <Link to="/cart"><Button className="cart  circle">
                         
                         <GrCart />
-                      </Button>
+                      </Button></Link>
                       <span className="count d-flex align-items-center justify-content-center ">
                         1
                       </span>

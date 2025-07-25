@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ProductModel from "./components/ProductModel";
 import Listing from "./pages/Listing";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
 const MyContext = createContext();
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/" exact={true} element={<Home />} />
             <Route path="/cat/:id" exact={true} element={<Listing />} />
             <Route path="/product/:id" exact={true} element={<ProductDetails />} />
+            <Route path="/cart" exact={true} element={<Cart />} />
           </Routes>
           <Footer />
           {isOpenProductModel === true && <ProductModel />}

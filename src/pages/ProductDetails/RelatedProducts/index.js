@@ -22,6 +22,8 @@ function RelatedProducts(props) {
                     <Swiper
                     slidesPerView={5}
                     spaceBetween={10}
+                    navigation={true}
+                loop={false}
                     pagination={{clickable: true,}}
                     modules={[Navigation]}
                     className="mySwiper">

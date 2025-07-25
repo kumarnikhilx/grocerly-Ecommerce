@@ -9,6 +9,7 @@ import { MyContext } from '../../App';
 import { MdCompareArrows } from "react-icons/md";
 import QuantityBox from '../QuantityBox';
 import ProductZoom from '../ProductZoom';
+import {IoCartSharp} from 'react-icons/io5'
 
    function ProductModel(props) {
        const context=useContext(MyContext);  
@@ -44,7 +45,7 @@ import ProductZoom from '../ProductZoom';
 
                 <div className="d-flex align-items-center">
                     <QuantityBox/>
-                    <Button className='btn-blue btn-big btn-round'>Add to Cart </Button>
+                    <Button className='btn-red btn-big btn-round'><IoCartSharp className="mr-1"/>Add to Cart </Button>
                 </div>
 
                 <div className="d-flex align-items-center mt-5 actions">

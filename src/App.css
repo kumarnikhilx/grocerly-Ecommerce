@@ -20,6 +20,12 @@ body {
   background: #ed174a !important;
   color: #fff !important;
 }
+.btn-red:hover{background: #6e3ace !important; color: #fff !important;}
+.btn-red  svg{font-size: 20px !important;}
+.bg-blue{  background: #6e3ace !important;}
+.text-blue{color: #6e3ace !important;}
+.bg-red{background: #ed174a !important;}
+.text-red{color: #ed174a !important;}
 .btn-blue {
   background: #6e3ace !important;
   color: #fff !important;
@@ -27,6 +33,7 @@ body {
 .btn-big {
   font-size: 15px !important;
   padding: 7px 35px !important;
+  font-weight: 600 !important;
 }
 .btn-round {
   border-radius: 30px !important;
@@ -466,6 +473,46 @@ nav .navPart2 li .submenu a button:hover .blink {
 .product_row {
   margin-top: 12px;
 }
+
+/*-----------product_row slider button css----------*/
+.product_row .swiper {
+  overflow: hidden !important;
+  padding-right: 80px !important;
+
+}
+.product_row .item img {
+  border-radius: 20px;
+}
+
+.product_row .swiper-slide {
+  width: 100%;
+
+}
+
+.product_row .swiper-button-next,
+.product_row .swiper-button-prev {
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.product_row .swiper-button-next::after,
+.product_row .swiper-button-prev::after {
+  font-size: 18px;
+}
+
+.product_row .swiper-pagination-bullet {
+  background: #333;
+  opacity: 10;
+}
+
+
+/*-----------slider button css {ENDS HERE}----------*/
 .productRow .viewAllBtn {
   padding: 5px 25px;
   background: #fff;
@@ -529,7 +576,7 @@ nav .navPart2 li .submenu a button:hover .blink {
   font-size: 15px;
 }
 .productItem .actions Button:hover {
-  background: #6e3ace !important;
+  background: #ed174a !important;
 }
 .productItem .imgWrapper {
   overflow: hidden;
@@ -550,6 +597,7 @@ nav .navPart2 li .submenu a button:hover .blink {
 
 .productItem .actions Button:hover svg {
   color: #fff;
+  opacity: 1 !important;
 }
 
 .productItem .info {
@@ -1139,3 +1187,29 @@ footer .copyright ul li a:hover svg {
   display: flex;
   flex-direction: column;
 }
+
+/*-----------CartPage CSS {START HERE}-----------------*/
+.cartPage .table thead { background: #e3e3e3 !important; overflow: hidden; }
+.cartPage .table thead th { border: 0px !important; }
+.cartPage .table thead th:first-child { border-top-left-radius: 10px !important; border-bottom-left-radius: 10px !important; }
+.cartPage .table thead th:last-child { border-top-right-radius: 10px !important; border-bottom-right-radius: 10px !important; }
+a:hover { text-decoration: none; }
+.cartItemimgWrapper {width: 280px ;}
+.cartItemimgWrapper .imgWrapper { width: 100px; overflow: hidden; }
+.cartItemimgWrapper .info a:hover { text-decoration: none; }
+.cartItemimgWrapper .info h6 { color: #343434; font-weight: bold; }
+.cartItemimgWrapper .info h6:hover{color: #ed174a !important;}
+.remove svg{font-size: 30px !important; color: #000 !important;}
+.table .remove{width: 40px !important;height: 40px !important;background: #edeef5 !important;border-radius: 50% !important;min-width: 40px !important;line-height: 0px !important;padding: 0px !important;margin: 0px !important;   display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;}
+  .table .remove:hover svg{color: #ed174a !important;}
+  .cartPage .quantityDrop button{zoom: 75%;}
+.cartPage table th, .cartPage table td{vertical-align: middle;}
+.cartPage .table td,.cartPage .table th{border-top: 0px !important;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+.cartDetails{position: sticky !important;top: 20px !important; border-radius: 9px !important;}
+.cartPage .table tr:hover{background: #fafafa !important;}
+.cartDetails .btn-round:hover{background: #6a4bbc !important; color: #fff;}
+.cartDetails h4{border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;padding-bottom: 10px !important;}
+
+/*-----------CartPage CSS {ENDS HERE}-----------------*/

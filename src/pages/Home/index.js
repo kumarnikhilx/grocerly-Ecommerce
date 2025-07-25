@@ -56,6 +56,8 @@ const Home = () => {
                 <Swiper
                 slidesPerView={4}
                 spaceBetween={6}
+                 navigation={true}
+                loop={false}
                 pagination={{clickable: true,}}
                 modules={[Navigation]}
                 className="mySwiper">

@@ -37,7 +37,6 @@ router.delete(`/:id`, async (req, res) => {
   res.status(202).json({ message: true, success: "Category Deleted!" });
 });
 
-// POST route to upload multiple images with concurrency limit
 router.post("/create", async (req, res) => {
   const limit = pLimit(2);
   const imagesToUpload = req.body.images.map((image) => {

@@ -15,13 +15,15 @@ app.options("*", cors()); // Handle preflight requests for all routes
 app.use(bodyParser.json());
 //Routes
 const categoryRoutes =require('./routes/categories')
+const productRoutes =require('./routes/products')
 
 app.use('/api/category', categoryRoutes);
+app.use('/api/products', productRoutes);
+
 
 
 //database
-mongoose
-  .connect(process.env.CONNECTION_STRING, {
+mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

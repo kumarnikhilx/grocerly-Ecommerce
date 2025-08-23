@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{margin: 0px;padding: 0px;}
+
+body{font-family: "open Sans",sans-serif;background: #ebe9e9;} 
+header{width: 100%; height: 80px;background: #fff;}
+
+header .logo img{width: 48px !important;height: 70px !important;}
+header .row{margin: 0px !important;}

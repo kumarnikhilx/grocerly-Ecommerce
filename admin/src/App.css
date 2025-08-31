@@ -132,12 +132,10 @@ header button.rounded-circle:hover svg{color: #0858f7 !important;}
 .dropdownInfo p{
     font-size: 12px !important;
 }
-
 .text-sky {
     color: #0858f7 !important;
 }
 .dropdown_list .scroll{max-height: 300px ;overflow-y: scroll; overflow-x: hidden;}
-
 .main .sidebarWrapper {width: 20%; flex: 0 0 20%; transition: all 0.3s ease-in-out;}
 .main .sidebarWrapper .sidebar {width: 20%; height: 100vh;max-height: calc(100%-70px); position: fixed; top: 70px; left: 0px; background: #fff; overflow-y: scroll; overflow-x: hidden;padding-bottom: 80px;}
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{width: 3px !important;height: 5px !important;}
@@ -153,28 +151,15 @@ header button.rounded-circle:hover svg{color: #0858f7 !important;}
 .main .sidebarWrapper .sidebar ul li button:hover{background: #f1f1f1 !important;}
 .main .sidebarWrapper .sidebar ul li button.active{background: #f1f1f1 !important;}
 .main .sidebarWrapper .sidebar ul li button.active .arrow{transform: rotate(90deg) !important;}
-
- .main .sidebarWrapper .sidebar ul .submenu {padding: 0px 35px; }
+.main .sidebarWrapper .sidebar ul .submenu {padding: 0px 35px; }
 .main .sidebarWrapper .sidebar ul .submenu li {width: 100%; list-style: none;}
 .main .sidebarWrapper .sidebar ul .submenu li a {color: #5e5d72 !important; text-decoration: none; display: block; padding: 5px 0px; font-size: 15px; font-weight: 600; transition: all 0.3s;}
-.main .sidebarWrapper .sidebar ul .submenu li:hover a{color: #0858f7 !important}
-.main .sidebarWrapper .sidebar ul .submenuWrapper {
-  transition: all 0.3s;
-  /* height: 0px; */
-  overflow: hidden;
-}
-.main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed {
-   transition: all 0.3s;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.main .sidebarWrapper .sidebar ul .submenuWrapper.collapse {
-  height: auto !important;
-  opacity: 1;
-  pointer-events: auto;
-}
+.main .sidebarWrapper .sidebar ul .submenu li:hover a{color: #0858f7 !important; font-weight: 600 !important;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper{overflow: hidden; transition: all 0.3s ease-in-out;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed{height: 0px ;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed .submenu{opacity: 0;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse{height: auto ;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu{opacity: 1 ;}
 /* mine Line Design */
 .main .sidebarWrapper .sidebar ul .submenu .blinkLine{margin-right: 10px;}
 .main .sidebarWrapper .sidebar ul .submenu li:hover .blinkLine{color: #ef9116;}

@@ -14,8 +14,8 @@ function Sidebar() {
   const [activeTab, setActiveTab] = useState(null);
   const [isToggle, setIsToggle] = useState(false);
   const isOpenSubmenu = (index) => {
-    setIsToggle(!isToggle);
     setActiveTab(index);
+    setIsToggle(!isToggle);
   };
   return (
     <>
@@ -34,7 +34,7 @@ function Sidebar() {
               </Button>
             </Link>
           </li>
-          <li>
+          <li>            
             <Button
               className={`w-100 ${activeTab === 1  && isToggle? "active" : ""}`}
               onClick={() => isOpenSubmenu(1)}>
@@ -46,7 +46,7 @@ function Sidebar() {
                 <FaAngleRight />
               </span>
             </Button>
-           <div className={`submenuWrapper ${activeTab === 1? "collapse" : "colapsed"}`}>
+           <div className={`submenuWrapper ${activeTab === 1 && isToggle? "colapse" : "colapsed"}`}>
             <ul className="submenu">
               <li>
                 <Link to="#"><span className="blinkLine ">|</span>Product List</Link>
@@ -59,10 +59,11 @@ function Sidebar() {
               </li>
             </ul>
           </div>
+          
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 2 ? "active" : ""}`}  onClick={() => isOpenSubmenu(2)} >
+              <Button className={`w-100 ${activeTab === 2  && isToggle? "active" : ""}`}  onClick={() => isOpenSubmenu(2)} >
                 <span className="icon">
                   <IoCart />
                 </span>
@@ -75,7 +76,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 3 ? "active" : ""}`}  onClick={() => isOpenSubmenu(3)} >
+              <Button className={`w-100 ${activeTab === 3  && isToggle? "active" : ""}`}  onClick={() => isOpenSubmenu(3)} >
                 <span className="icon">
                   <MdMessage />
                 </span>
@@ -88,7 +89,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 4 ? "active" : ""}`}onClick={() => isOpenSubmenu(4)}>
+              <Button className={`w-100 ${activeTab === 4  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(4)}>
                 <span className="icon">
                   <IoIosNotifications />
                 </span>
@@ -101,7 +102,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 5 ? "active" : ""}`}onClick={() => isOpenSubmenu(5)}>
+              <Button className={`w-100 ${activeTab === 5  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(5)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -114,7 +115,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 6 ? "active" : ""}`} onClick={() => isOpenSubmenu(6)}>
+              <Button className={`w-100 ${activeTab === 6  && isToggle? "active" : ""}`} onClick={() => isOpenSubmenu(6)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -127,7 +128,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 7 ? "active" : ""}`}onClick={() => isOpenSubmenu(7)}> 
+              <Button className={`w-100 ${activeTab === 7  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(7)}> 
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -140,7 +141,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 8 ? "active" : ""}`} onClick={() => isOpenSubmenu(8)}>
+              <Button className={`w-100 ${activeTab === 8  && isToggle? "active" : ""}`} onClick={() => isOpenSubmenu(8)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -153,7 +154,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 9 ? "active" : ""}`}onClick={() => isOpenSubmenu(9)}>
+              <Button className={`w-100 ${activeTab === 9  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(9)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -166,7 +167,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 10 ? "active" : ""}`} onClick={() => isOpenSubmenu(10)}>
+              <Button className={`w-100 ${activeTab === 10  && isToggle? "active" : ""}`} onClick={() => isOpenSubmenu(10)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -179,7 +180,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 11 ? "active" : ""}`}onClick={() => isOpenSubmenu(11)}>
+              <Button className={`w-100 ${activeTab === 11  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(11)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>
@@ -192,7 +193,7 @@ function Sidebar() {
           </li>
           <li>
             <Link to="/">
-              <Button className={`w-100 ${activeTab === 12 ? "active" : ""}`}onClick={() => isOpenSubmenu(12)}>
+              <Button className={`w-100 ${activeTab === 12  && isToggle? "active" : ""}`}onClick={() => isOpenSubmenu(12)}>
                 <span className="icon">
                   <IoIosSettings />
                 </span>

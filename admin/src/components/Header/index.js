@@ -9,8 +9,8 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import { FaShieldHalved } from "react-icons/fa6";
 import { MdAccountCircle } from "react-icons/md";
@@ -27,8 +27,6 @@ const Header = () => {
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
-  // ✅ Close handler: reset to null
   const handleCloseMyAccDrop = () => {
     setAnchorEl(null);
   };

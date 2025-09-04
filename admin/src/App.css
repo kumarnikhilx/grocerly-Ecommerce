@@ -17,7 +17,9 @@ body {
 header {
   width: 100%;
   height: 70px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -176,11 +178,14 @@ header button.rounded-circle:hover svg{color: #0858f7 !important;}
 .main .content{
   width: 80%;
   flex: 0 0 80%;
+
 }
 
-.right-content{
-  padding: 90px 30px;
-}
+.content .right-content{
+  padding: 20px 30px;
+width: 80% !important; height: 100vh;max-height: calc(100% - 70px); position: fixed; background: #fff; overflow-y: scroll; overflow-x: hidden;
+top: 70px;transition: all 0.3s ease-in-out;
+  }
 
 .dashboardBoxWrapper{
   gap: 20px;
@@ -211,13 +216,14 @@ header button.rounded-circle:hover svg{color: #0858f7 !important;}
 .dashboardBoxWrapperRow .box{
   width: 100%;
   height: 100%;
+  /* padding: 20px; */
 }
-.dashboardBoxWrapper .dashboardBox .col1 h4 { font-size: 25px; font-weight: 600; }
+.dashboardBoxWrapper .dashboardBox .col1 h4 { font-size: 23px; font-weight: 600; }
 
 .dashboardBoxWrapper .dashboardBox .col1 span { font-size: 35px !important; font-weight: bold; line-height: 30px; }
 
 .dashboardBoxWrapper .dashboardBox .icon { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 10px; background-image: linear-gradient(to bottom right, rgba(0,0,0,0.0), rgba(0,0,0,0.3)); }
-.dashboardBoxWrapper .dashboardBox{padding: 16px;}
+.dashboardBoxWrapper .dashboardBox{padding: 18px;}
 .dashboardBoxWrapper .dashboardBox .icon svg { font-size: 36px; opacity: 0.4; color: #fff !important; }
 .dashboardBoxWrapperRow .box { width: 100%; height: 100%; background: #ccc;}
 /* .dashboardBoxWrapper .dashboardBox .bottomEle{position: relative;top: 25px;} */
@@ -233,3 +239,49 @@ header button.rounded-circle:hover svg{color: #0858f7 !important;}
 .graphBox .toggleIcon svg{color: #fff !important;}
 .graphBox h4{font-size: 20px !important;font-weight: 600 !important;color: #fff !important;opacity: 1;}
 .graphBox p{font-size: 14px !important;color: #fff !important;opacity: 0.7 !important;margin-top: 5px !important;}
+
+
+/*--------Card Section-------------*/
+.card{background: #fff !important; border-radius: 10px !important; box-shadow: 0px 0px 15px rgba(0,0,0,0.1) !important; transition: all 0.3s ease-in-out !important;}
+.card .hd{font-size: 18px !important;font-weight: 700 !important;color: #403e57 !important;margin-bottom: 15px !important;}
+.card .col-md-3 h4{font-size: 14px !important;font-weight: 700 !important;color: #403e57 !important;opacity: 1 !important;margin-bottom: 5px !important; text-transform: capitalize !important;}
+.cardfilter{display: flex !important;align-items: center !important;justify-content: space-between !important; margin-bottom: 15px !important;}
+
+.table .thead-dark th{background-color: #1866ee !important;color: #fff !important;font-size: 15px !important;font-weight: 700 !important; text-transform: capitalize !important; border-bottom: 0px !important; border-color: rgba(0,0,0,0.1) !important;}
+.table tbody tr{border-bottom: 1px solid rgba(0,0,0,0.1) !important;}
+.table tbody tr:hover{background: #f9f9f9 !important;cursor: pointer !important;}
+.table tbody tr td{font-size: 15px !important;color: #403e57 !important;opacity: 1!important; vertical-align: middle !important; border-top: 0px !important; padding: 12px 15px !important; text-transform: capitalize !important;}
+.table tbody tr td b{font-weight: 600 !important;color: #403e57 !important;}
+.table tbody .actions{display: flex !important;align-items: center !important;justify-content: center !important;gap: 8px !important;}
+.table tbody .actions button{min-width: 35px !important;width: 35px !important;height: 35px !important;background: #f0f5ff !important;color: #0858f7 !important; border-radius: 5px !important; }
+.table tbody .actions button:hover{background: #0858f7 !important;color: #fff !important;cursor: pointer !important;}
+.table tbody .actions button svg{font-size: 16px !important;}
+.table tbody .actions button.viewBtn{background: rgba(203,60,231,0.1) !important;color: #7a1e96 !important;}
+.table tbody .actions button.viewBtn:hover{background: #7a1e96 !important;color: #fff !important;cursor: pointer !important;}
+.table tbody .actions button.editBtn{background: rgba(26,159,83,0.1) !important;color: #166e3e !important;}
+.table tbody .actions button.editBtn:hover{background: #166e3e !important;color: #fff !important;cursor: pointer !important;}
+.table tbody .actions button.deleteBtn{background: rgba(241,17,51,0.1) !important;color: #ff3b3b !important;}
+.table tbody .actions button.deleteBtn:hover{background: #ff3b3b !important;color: #fff !important;cursor: pointer !important;}
+.table tbody .actions button svg{font-size: 17px !important;}
+.table .priceSec{display: flex !important;align-items: center !important;justify-content: center !important;flex-direction: column !important; gap: 3px !important;}
+.table tbody tr td .oldPrice{font-size: 14px !important;color: #403e57 !important;opacity: 0.7 !important;text-decoration: line-through !important;margin-right: 5px !important;}
+.table tbody tr td .newPrice{font-size: 15px !important;color: #ec554d !important;opacity: 1 !important;font-weight: 600 !important;}
+ .table tbody .productItem{width: 200px !important;}
+ .table tbody .productItem .info{width: 70% !important;}
+.table tbody .productItem .info h6{font-size: 15px !important;font-weight: 700 !important;color: #403e57 !important;opacity: 1 !important;white-space: nowrap!important; text-overflow: ellipsis !important; overflow: hidden !important;}
+.table tbody .productItem .info p{font-size: 13px !important;color: #403e57 !important;opacity: 0.9 !important;margin-top: 3px !important; line-height: 18px !important; white-space: nowrap!important; text-overflow: ellipsis !important; overflow: hidden !important; margin-bottom: 0px !important;}
+.table tbody tr td .d-flex{display: flex !important;align-items: center !important;justify-content: flex-start !important; gap: 10px !important;}
+.table tbody tr td .d-flex span{font-size: 14px !important;color: #403e57 !important;opacity: 1 !important;}
+.table tbody tr td .d-flex input{width: 15px !important;height: 15px !important;cursor: pointer !important;}
+.table tbody tr td .d-flex b{font-size: 18px !important;color: #403e57 !important;opacity: 1 !important;font-weight: 600 !important ;}  
+.table td .productItem .imgWrapper{width: 50px !important;height: 50px !important; border: 1px solid #f0f0f0 !important; padding: 3px !important; border-radius: 5px !important; display: flex !important;align-items: center !important;justify-content: center !important; overflow: hidden !important;}
+.table td .productItem .imgWrapper img{height: 100% !important;object-fit: cover !important;}    
+
+.paginationWrapper{margin-top: 15px !important;margin-bottom: 20px !important;}
+.paginationWrapper .MuiPagination-ul{justify-content: flex-end !important;}
+.paginationWrapper .MuiPaginationItem-root{font-size: 14px !important; font-weight: 600 !important; color: rgba(0, 0, 0, 0.9) !important; border-radius: 50% !important; min-width: 35px !important; width: 35px !important; height: 35px !important; margin: 0px 3px !important; background: #f0f0f0 !important;}
+.paginationWrapper .MuiPaginationItem-root:hover{background: #0858f7 !important; color: #fff !important; cursor: pointer !important;}
+.paginationWrapper .MuiPaginationItem-root  .Mui-selected{background: #0858f7 !important; color: #fff !important;}
+.paginationWrapper .MuiPaginationItem-root  .Mui-selected:hover{background: #0858f7 !important; color: #fff !important; cursor: pointer !important;}
+.paginationWrapper .MuiPaginationItem-root .Mui-selected{background: #0858f7 !important; color: #fff !important;}
+.paginationWrapper .MuiPaginationItem-root .Mui-selected:hover{background: #0858f7 !important; color: #fff !important; cursor: pointer !important;}

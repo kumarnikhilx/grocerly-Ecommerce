@@ -1,6 +1,6 @@
-import { MdMenuOpen } from "react-icons/md";
+import { MdMenuOpen, MdOutlineMenu } from "react-icons/md";
 import { CiBellOn } from "react-icons/ci";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.webp";
 import Button from "@mui/material/Button";
@@ -17,12 +17,16 @@ import { MdAccountCircle } from "react-icons/md";
 import Logout from "@mui/icons-material/Logout";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import { Divider } from "@mui/material";
+import { MyContext } from "../../App";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [isOpenNotificationDrop, setIsOpenNotificationDrop] = useState(null);
   const openMyAcc = Boolean(anchorEl);
   const openNotifications = Boolean(isOpenNotificationDrop);
+
+    const context=useContext(MyContext);
+
 
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
@@ -50,8 +54,10 @@ const Header = () => {
             </div>
 
             <div className="part2 col-sm-3 d-flex align-items-center pl-4">
-              <Button className="rounded-circle mr-3  ">
-                <MdMenuOpen />
+              <Button className="rounded-circle mr-3  " onClick={context.toggleSidebar}>
+                {
+                  !context.isToggled ? < MdMenuOpen/> :<MdOutlineMenu/>
+                }
               </Button>
               <SearchBox />
             </div>

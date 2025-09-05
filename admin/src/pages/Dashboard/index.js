@@ -600,7 +600,8 @@ function Dashboard() {
                 </tr>
               </tbody>
             </table>
-            <div className="paginationWrapper d-flex justify-content-end">
+            <div className="paginationWrapper d-flex  align-items-center">
+              <p>showing <b>12</b> of<b> 60</b> results</p>
               <Pagination count={10} color="primary" />
             </div>
           </div>

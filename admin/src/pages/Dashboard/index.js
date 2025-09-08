@@ -228,9 +228,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -283,9 +285,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -338,9 +342,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -393,9 +399,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -448,9 +456,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -503,9 +513,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -558,9 +570,11 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img
+                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"/>
+                            className="w-100"
+                          />
                         </div>
                       </div>
                       <div className="info">
@@ -601,7 +615,9 @@ function Dashboard() {
               </tbody>
             </table>
             <div className="paginationWrapper d-flex  align-items-center">
-              <p>showing <b>12</b> of<b> 60</b> results</p>
+              <p>
+                showing <b>12</b> of<b> 60</b> results
+              </p>
               <Pagination count={10} color="primary" />
             </div>
           </div>

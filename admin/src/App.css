@@ -18,7 +18,11 @@ body {
 ::-webkit-scrollbar-track {
   background: transparent !important;
 }
-
+.full{
+  max-width: 100% !important;
+  width: 100% !important;
+  flex: 0 0 100% !important;
+}
 .btn-blue {
   background: #0858f7 !important;
   font-size: 14px !important ;
@@ -788,3 +792,18 @@ header button.rounded-circle:hover svg {
 .table-responsive {
   overflow-x: hidden !important;
 }
+
+/*-------------login-------------------*/
+.loginSection{width: 100%; height: 100vh; padding: 35px 25px; background: #fff; position: relative; }
+.loginPatern{width: 100%; height: 100%; opacity: 0.08; position: fixed; top: 0px; left: 0px; z-index: 99; pointer-events: none;}
+.loginSection .loginBox{width: 500px; height: auto; margin:auto;}
+.loginSection .loginBox .wrapper{width: 100%; height: 300px; background: #f0f0f0 !important;position: relative;z-index: 100;}
+.loginSection .loginBox .wrapper .form-control{width: 100%; height: 45px;  outline: none;  font-size: 15px; color: #403e57; background: #fff !important; border-radius: 7px !important; margin-bottom: 15px !important; padding-left: 45px !important;}
+.loginSection .loginBox .wrapper .form-control::placeholder{color: rgba(0,0,0,0.7);}
+.loginSection .loginBox .wrapper .form-control:focus{box-shadow: 0px 0px 10px rgba(8,88,247,0.3) !important; border: 1px solid #0858f7 !important;}
+.loginSection .loginBox .wrapper button{width: 100%; height: 45px; background: #0858f7 !important; color: #fff !important; font-size: 16px !important; font-weight: 600 !important; border-radius: 5px !important; border: 0px; outline: none; transition: all 0.3s ease-in-out !important;}
+.loginSection .loginBox .wrapper button:hover{background: #0746d1 !important; cursor: pointer !important;}
+.loginSection .loginBox .wrapper .form-group .icon{position: absolute;top: 3px; left: 15px; color: rgba(0,0,0,0.6); font-size: 23px;}
+.loginSection .loginBox .wrapper .form-group .icon svg{color: #5e5d72 !important;}
+
+

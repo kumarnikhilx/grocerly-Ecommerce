@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import SearchBox from "../SearchBox";
 import { MdOutlineLightMode } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
-import { MdDarkMode } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,9 +23,6 @@ const Header = () => {
   const [isOpenNotificationDrop, setIsOpenNotificationDrop] = useState(null);
   const openMyAcc = Boolean(anchorEl);
   const openNotifications = Boolean(isOpenNotificationDrop);
-
-  //login
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const context = useContext(MyContext);
 
@@ -351,7 +347,7 @@ const Header = () => {
 
               {/*---------------------------my account---------------------*/}
               {
-                (isLoggedIn!=true)? <Button variant="contained" className="btn-blue btn-round btn-lg" >Sign In</Button>:
+                (context.isLoggedIn!=true)? <Link to={'/login'} ><Button variant="contained" className="btn-blue btn-round btn-lg"  >Sign In</Button></Link>:
                  <div className="myAccWrapper">
                 <Button
                   className="myAcc d-flex align-items-center"

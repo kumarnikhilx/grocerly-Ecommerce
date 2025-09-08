@@ -5,7 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { RxDashboard } from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
-import DashboardBox from "./Components/dashboardBox";
+import DashboardBox from "./components/dashboardBox";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdShoppingBag } from "react-icons/md";
 import { GoStarFill } from "react-icons/go";
@@ -228,11 +228,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -285,11 +283,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -342,11 +338,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -399,11 +393,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -456,11 +448,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -513,11 +503,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -570,11 +558,9 @@ function Dashboard() {
                     <div className="d-flex productItem">
                       <div className="imgWrapper">
                         <div className="img">
-                          <img
-                            src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
+                          <img src="https://mironcoder-hotash.netlify.app/images/product/01.webp"
                             alt=""
-                            className="w-100"
-                          />
+                            className="w-100"/>
                         </div>
                       </div>
                       <div className="info">
@@ -615,16 +601,17 @@ function Dashboard() {
               </tbody>
             </table>
             <div className="paginationWrapper d-flex  align-items-center">
-              <p>
-                showing <b>12</b> of<b> 60</b> results
-              </p>
+              <p>showing <b>12</b> of<b> 60</b> results</p>
               <Pagination count={10} color="primary" />
             </div>
           </div>
         </div>
       </div>
+      
     </>
   );
 }
+
+
 
 export default Dashboard;

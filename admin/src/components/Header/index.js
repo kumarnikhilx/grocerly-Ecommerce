@@ -9,8 +9,8 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import { FaShieldHalved } from "react-icons/fa6";
 import { MdAccountCircle } from "react-icons/md";
@@ -25,8 +25,10 @@ const Header = () => {
   const openMyAcc = Boolean(anchorEl);
   const openNotifications = Boolean(isOpenNotificationDrop);
 
-    const context=useContext(MyContext);
+  //login
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const context = useContext(MyContext);
 
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
@@ -54,14 +56,15 @@ const Header = () => {
             </div>
 
             <div className="part2 col-sm-3 d-flex align-items-center pl-4">
-              <Button className="rounded-circle mr-3  " onClick={context.toggleSidebar}>
-                {
-                  !context.isToggled ? < MdMenuOpen/> :<MdOutlineMenu/>
-                }
+              <Button
+                className="rounded-circle mr-3  "
+                onClick={context.toggleSidebar}
+              >
+                {!context.isToggled ? <MdMenuOpen /> : <MdOutlineMenu />}
               </Button>
               <SearchBox />
             </div>
-            <div className="part3 col-sm-7 d-flex align-items-center  justify-content-end pl-4">
+            <div className="part3 col-sm-7 d-flex align-items-center  justify-content-end ">
               <Button className="rounded-circle mr-3  ">
                 <MdOutlineLightMode />
               </Button>
@@ -337,16 +340,19 @@ const Header = () => {
                       </div>
                     </MenuItem>
                   </div>
-                  <div className="pl-3 pr-3 w-100 pb-1 pt-2" >
+                  <div className="pl-3 pr-3 w-100 pb-1 pt-2">
                     <Button className="btn-blue w-100  ">
                       View All Notification
                     </Button>
                   </div>
                 </Menu>
               </div>
+              {/*---------------------------notifictions end---------------------*/}
 
-              <div className="myAccWrapper">
-                {/* ✅ Only Button */}
+              {/*---------------------------my account---------------------*/}
+              {
+                (isLoggedIn!=true)? <Button variant="contained" className="btn-blue btn-round btn-lg" >Sign In</Button>:
+                 <div className="myAccWrapper">
                 <Button
                   className="myAcc d-flex align-items-center"
                   onClick={handleOpenMyAccDrop}
@@ -396,6 +402,10 @@ const Header = () => {
                   </MenuItem>
                 </Menu>
               </div>
+
+              }
+             
+              {/*---------------------------my account end---------------------*/}
             </div>
           </div>
         </div>
